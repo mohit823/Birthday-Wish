@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mohit! 🎉</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("PTld-daA8bRwQu9QJ"); // Replace with your EmailJS public key
+        })();
+    </script>
+    <style>
+        :root {
+            --bg-color: linear-gradient(-45deg, #ffecd2, #fcb69f, #ff9a9e, #fad0c4, #ffecd2);
+            --text-color: #fff;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --card-text: #555;
+            --accent: #3f3b7b;
+        }
+
+        .dark-mode {
+            --bg-color: linear-gradient(-45deg, #2c3e50, #34495e, #2c3e50, #34495e, #2c3e50);
+            --text-color: #ecf0f1;
+            --card-bg: rgba(44, 62, 80, 0.95);
+            --card-text: #bdc3c7;
+            --accent: #e74c3c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            background: var(--bg-color);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            position: relative;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating Balloons */
+        .balloon {
+            position: fixed;
+            bottom: -150px;
+            width: 50px;
+            height: 70px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: float 8s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-120vh) translateX(50px) rotate(20deg);
+                opacity: 0;
+            }
+        }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            z-index: 1;
+            animation: confettiFall 4s linear infinite;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Container */
+        .container {
+            position: relative;
+            z-index: 10;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Hero Text */
+        .hero-text {
+            font-family: 'Pacifico', cursive;
+            font-size: 5rem;
+            color: var(--text-color);
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                         0 0 40px rgba(255, 105, 180, 0.6),
+                         0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            animation: glowPulse 2s ease-in-out infinite, slideDown 1s ease-out;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                             0 0 40px rgba(255, 105, 180, 0.6),
+                             0 5px 15px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 1),
+                             0 0 60px rgba(255, 105, 180, 0.8),
+                             0 5px 20px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Cake */
+        .cake {
+            font-size: 4rem;
+            animation: bounce 2s ease-in-out infinite, fadeIn 1.5s ease-out;
+            margin: 20px 0;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Message Card */
+        .message-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: 30px auto;
+            animation: slideUp 1s ease-out 0.5s backwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .message-card h2 {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .message-card p {
+            color: var(--card-text);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Wish Button */
+        .wish-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            animation: slideUp 1s ease-out 1s backwards;
+        }
+
+        .wish-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .wish-button:active {
+            transform: translateY(-2px);
+        }
+
+        /* Sound Toggle */
+        .sound-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+
+        .sound-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        /* Firework Canvas */
+        #fireworkCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            display: none;
+        }
+
+        /* Final Popup */
+        .final-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            z-index: 200;
+            text-align: center;
+            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .final-popup.show {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .final-popup h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: #ff6b9d;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .final-popup p {
+            font-size: 1.3rem;
+            color: #555;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 199;
+            display: none;
+            backdrop-filter: blur(5px);
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        /* Particle System */
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 5;
+            animation: particleFade 1s ease-out forwards;
+        }
+
+        @keyframes particleFade {
+            from {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translate(var(--tx), var(--ty)) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 0.9s backwards;
+        }
+
+        .photo-gallery h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Quiz Section */
+        .quiz-section {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 1.1s backwards;
+        }
+
+        .quiz-section h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .quiz-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .quiz-btn:hover {
+            background: #764ba2;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: var(--accent);
+        }
+
+        /* Share Section */
+        .share-section {
+            margin: 20px 0;
+            text-align: center;
+            animation: slideUp 1s ease-out 1.3s backwards;
+        }
+
+        .share-section h3 {
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        .share-btn {
+            margin: 5px;
+            padding: 10px 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .share-btn:hover {
+            background: #764ba2;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            animation: fadeIn 2s ease-out 1.5s backwards;
+        }
+
+        /* Birthday Facts */
+        .birthday-facts {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 1.5s backwards;
+        }
+
+        .birthday-facts h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .fact {
+            font-size: 1.1rem;
+            color: var(--card-text);
+            font-style: italic;
+        }
+
+        /* Message Form */
+        .message-form {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 1.7s backwards;
+        }
+
+        .message-form h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .message-form input, .message-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .message-form button {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .message-form button:hover {
+            background: #764ba2;
+        }
+
+        /* Saved Messages */
+        .saved-messages {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 2.9s backwards;
+        }
+
+        .saved-messages h4 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .saved-message {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: left;
+            border-left: 4px solid var(--accent);
+        }
+
+        .saved-message strong {
+            color: var(--accent);
+        }
+
+        .saved-message small {
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        /* Countdown */
+        .countdown {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 1.9s backwards;
+        }
+
+        .countdown h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .countdown-timer {
+            font-size: 1.5rem;
+            color: var(--card-text);
+            font-weight: bold;
+        }
+
+        /* Gift Box */
+        .gift-box {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 2.1s backwards;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.05);
+        }
+
+        .gift-box h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .gift-emoji {
+            font-size: 4rem;
+            transition: transform 0.5s;
+        }
+
+        .gift-box.opened .gift-emoji {
+            transform: rotateY(180deg);
+        }
+
+        .gift-surprise {
+            display: none;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            color: var(--card-text);
+        }
+
+        .gift-box.opened .gift-surprise {
+            display: block;
+        }
+
+        /* Photo Slideshow */
+        .photo-slideshow {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 2.3s backwards;
+        }
+
+        .photo-slideshow h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slide-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* Snowfall */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            pointer-events: none;
+            color: #fff;
+            font-size: 1rem;
+            animation: snowfall 10s linear infinite;
+            z-index: 2;
+        }
+
+        @keyframes snowfall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Color Picker */
+        .color-picker {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 2.5s backwards;
+        }
+
+        .color-picker h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .color-btn {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .color-btn:hover {
+            transform: scale(1.2);
+        }
+
+        /* Memory Game */
+        .memory-game {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 20px;
+            margin: 20px 0;
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 1s ease-out 2.7s backwards;
+        }
+
+        .memory-game h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .card {
+            aspect-ratio: 1;
+            background: #667eea;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: background 0.3s;
+            user-select: none;
+        }
+
+        .card.flipped {
+            background: #fff;
+            color: #333;
+        }
+
+        .card.matched {
+            background: #4CAF50;
+            color: white;
+        }
+
+        /* Typing Effect */
+        .typing-text {
+            border-right: 2px solid var(--accent);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: var(--accent); }
+            51%, 100% { border-color: transparent; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-text {
+                font-size: 4rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .gallery img {
+                width: 120px;
+                height: 80px;
+            }
+
+            .quiz-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .share-btn {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 3rem;
+            }
+
+            .message-card {
+                padding: 30px 20px;
+                margin: 20px auto;
+                width: calc(100% - 40px);
+                max-width: 90%;
+            }
+
+            .message-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .message-card p {
+                font-size: 1rem;
+            }
+
+            .cake {
+                font-size: 3rem;
+            }
+
+            .wish-button {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+
+            .final-popup {
+                padding: 30px;
+                width: 90%;
+            }
+
+            .final-popup h2 {
+                font-size: 2rem;
+            }
+
+            .final-popup p {
+                font-size: 1.1rem;
+            }
+
+            .special-traits {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .special-traits h3 {
+                font-size: 1.2rem;
+            }
+
+            .special-traits li {
+                font-size: 0.9rem;
+            }
+
+            .photo-gallery {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .photo-gallery h3 {
+                font-size: 1.2rem;
+            }
+
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery img {
+                width: 200px;
+                height: 150px;
+                margin: 5px 0;
+            }
+
+            .quiz-section {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .quiz-section h3 {
+                font-size: 1.2rem;
+            }
+
+            .quiz-btn {
+                width: 80%;
+                padding: 12px;
+                font-size: 1rem;
+            }
+
+            .share-section {
+                margin: 15px 0;
+            }
+
+            .share-btn {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+                margin: 5px;
+            }
+
+            .birthday-facts {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .birthday-facts h3 {
+                font-size: 1.2rem;
+            }
+
+            .fact {
+                font-size: 1rem;
+            }
+
+            .message-form {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .message-form h3 {
+                font-size: 1.2rem;
+            }
+
+            .saved-messages {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .saved-message {
+                padding: 12px;
+                margin: 8px 0;
+            }
+
+            .countdown {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .countdown h3 {
+                font-size: 1.2rem;
+            }
+
+            .countdown-timer {
+                font-size: 1.2rem;
+            }
+
+            .gift-box {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .gift-emoji {
+                font-size: 3rem;
+            }
+
+            .photo-slideshow {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .slideshow-container {
+                height: 150px;
+            }
+
+            .color-picker {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .color-options {
+                gap: 8px;
+            }
+
+            .color-btn {
+                width: 35px;
+                height: 35px;
+            }
+
+            .memory-game {
+                padding: 15px;
+                margin: 15px 0;
+            }
+
+            .game-board {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 250px;
+            }
+
+            .floating-hat {
+                font-size: 2rem;
+                top: 5%;
+                right: 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text {
+                font-size: 2.5rem;
+            }
+
+            .cake {
+                font-size: 2.5rem;
+            }
+
+            .message-card {
+                padding: 20px 15px;
+            }
+
+            .message-card h2 {
+                font-size: 1.3rem;
+            }
+
+            .message-card p {
+                font-size: 0.9rem;
+            }
+
+            .wish-button {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+
+            .special-traits {
+                padding: 10px;
+            }
+
+            .special-traits h3 {
+                font-size: 1.1rem;
+            }
+
+            .special-traits li {
+                font-size: 0.8rem;
+                padding-left: 25px;
+            }
+
+            .photo-gallery {
+                padding: 10px;
+            }
+
+            .gallery img {
+                width: 150px;
+                height: 100px;
+            }
+
+            .quiz-section {
+                padding: 10px;
+            }
+
+            .quiz-btn {
+                width: 90%;
+                padding: 10px;
+            }
+
+            .share-btn {
+                padding: 8px 10px;
+                font-size: 0.8rem;
+            }
+
+            .birthday-facts {
+                padding: 10px;
+            }
+
+            .fact {
+                font-size: 0.9rem;
+            }
+
+            .message-form {
+                padding: 10px;
+            }
+
+            .message-form input, .message-form textarea {
+                padding: 8px;
+            }
+
+            .saved-messages {
+                padding: 10px;
+            }
+
+            .saved-message {
+                padding: 10px;
+                margin: 5px 0;
+            }
+
+            .countdown {
+                padding: 10px;
+            }
+
+            .countdown-timer {
+                font-size: 1.1rem;
+            }
+
+            .gift-box {
+                padding: 10px;
+            }
+
+            .gift-emoji {
+                font-size: 2.5rem;
+            }
+
+            .photo-slideshow {
+                padding: 10px;
+            }
+
+            .slideshow-container {
+                height: 120px;
+            }
+
+            .color-picker {
+                padding: 10px;
+            }
+
+            .color-btn {
+                width: 30px;
+                height: 30px;
+            }
+
+            .memory-game {
+                padding: 10px;
+            }
+
+            .game-board {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 200px;
+            }
+
+            .floating-hat {
+                font-size: 1.5rem;
+            }
+
+            .sound-toggle {
+                padding: 8px 15px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .hero-text {
+                font-size: 6rem;
+            }
+
+            .cake {
+                font-size: 5rem;
+            }
+
+            .message-card {
+                padding: 50px;
+                max-width: 800px;
+            }
+
+            .special-traits {
+                max-width: 800px;
+            }
+
+            .photo-gallery {
+                max-width: 800px;
+            }
+
+            .quiz-section {
+                max-width: 800px;
+            }
+
+            .birthday-facts {
+                max-width: 800px;
+            }
+
+            .message-form {
+                max-width: 800px;
+            }
+
+            .saved-messages {
+                max-width: 800px;
+            }
+
+            .countdown {
+                max-width: 800px;
+            }
+
+            .gift-box {
+                max-width: 800px;
+                padding: 30px;
+            }
+
+            .gift-emoji {
+                font-size: 5rem;
+            }
+
+            .photo-slideshow {
+                max-width: 800px;
+            }
+
+            .slideshow-container {
+                height: 300px;
+            }
+
+            .color-picker {
+                max-width: 800px;
+            }
+
+            .memory-game {
+                max-width: 800px;
+            }
+
+            .game-board {
+                max-width: 400px;
+            }
+
+            .gallery img {
+                width: 200px;
+                height: 150px;
+            }
+
+            .floating-hat {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sound Toggle -->
+    <button class="sound-toggle" id="soundToggle">🔊 Sound ON</button>
+    <button class="sound-toggle" id="musicToggle" style="top: 70px;">🎵 Music OFF</button>
+    <button class="sound-toggle" id="darkModeToggle" style="top: 110px;">🌙 Dark Mode OFF</button>
+
+    <!-- Floating Hat -->
+    <div class="floating-hat">🎩</div>
+
+    <!-- Firework Canvas -->
+    <canvas id="fireworkCanvas"></canvas>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1 class="hero-text">Mohit</h1>
+        <div class="cake" onclick="cutCake()">🎂</div>
+        
+        <div class="message-card">
+            <h2>Happy Birthday Mohit 🎉💛</h2>
+            <p>You make life lighter, funnier, and better just by being in it. Wishing you a fantastic birthday filled with joy and laughter! May this year bring you success in everything you do.</p>
+        </div>
+
+        <div class="special-traits">
+            <h3>What Makes Mohit Special</h3>
+            <ul>
+                <li>Your incredible kindness and generosity that touches everyone around you</li>
+                <li>Your amazing sense of humor that lights up any room</li>
+                <li>Your dedication to your friends and family</li>
+                <li>Your passion for learning and personal growth</li>
+                <li>Your positive energy that inspires others</li>
+            </ul>
+        </div>
+
+        <div class="photo-gallery">
+            <h3>Birthday Memories</h3>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/200x150/ffb3ba/000?text=Memory+1" alt="Memory 1">
+                <img src="https://via.placeholder.com/200x150/ffdfba/000?text=Memory+2" alt="Memory 2">
+                <img src="https://via.placeholder.com/200x150/ffffba/000?text=Memory+3" alt="Memory 3">
+            </div>
+        </div>
+
+        <div class="quiz-section">
+            <h3>Fun Quiz: How Well Do You Know Mohit?</h3>
+            <div id="quiz">
+                <p id="question"></p>
+                <button class="quiz-btn" id="optionA"></button>
+                <button class="quiz-btn" id="optionB"></button>
+                <button class="quiz-btn" id="optionC"></button>
+            </div>
+            <p id="result"></p>
+        </div>
+
+        <button class="wish-button" id="wishButton">Make a Wish ✨</button>
+
+        <div class="share-section">
+            <h3>Share the Joy!</h3>
+            <button class="share-btn" onclick="shareOnFacebook()">📘 Facebook</button>
+            <button class="share-btn" onclick="shareOnTwitter()">🐦 Twitter</button>
+            <button class="share-btn" onclick="shareOnWhatsApp()">💬 WhatsApp</button>
+        </div>
+
+        <div class="birthday-facts">
+            <h3>Fun Birthday Facts</h3>
+            <p class="fact" id="factDisplay">Did you know? The tradition of birthday cakes dates back to ancient Rome!</p>
+        </div>
+
+        <div class="message-form">
+            <h3>Leave a Birthday Message</h3>
+            <input type="text" id="messageName" placeholder="Your Name" required>
+            <textarea id="messageText" placeholder="Your Message" rows="3" required></textarea>
+            <button onclick="submitMessage()">Send Message 💌</button>
+        </div>
+
+        <div class="saved-messages" id="savedMessages">
+            <p>Loading messages...</p>
+        </div>
+
+        <div class="countdown">
+            <h3>Countdown to Next Birthday</h3>
+            <div class="countdown-timer" id="countdownTimer">Calculating...</div>
+        </div>
+
+        <div class="gift-box" id="giftBox">
+            <h3>Click the Gift! 🎁</h3>
+            <div class="gift-emoji">🎁</div>
+            <div class="gift-surprise">
+                <p>Happy Birthday, Mohit! May your year be filled with joy, success, and amazing adventures! 🎉✨</p>
+            </div>
+        </div>
+
+        <div class="photo-slideshow">
+            <h3>Memory Slideshow</h3>
+            <div class="slideshow-container">
+                <div class="slide active">
+                    <img src="https://via.placeholder.com/400x200/ffecd2/000?text=Childhood+Memories" alt="Memory 1">
+                    <div class="slide-caption">Childhood Adventures</div>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/400x200/fcb69f/000?text=School+Days" alt="Memory 2">
+                    <div class="slide-caption">School Days</div>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/400x200/ff9a9e/000?text=Family+Time" alt="Memory 3">
+                    <div class="slide-caption">Family Moments</div>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/400x200/fad0c4/000?text=Friendship" alt="Memory 4">
+                    <div class="slide-caption">Great Friendships</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="color-picker">
+            <h3>Customize Colors</h3>
+            <p>Click a color to change balloons and confetti!</p>
+            <div class="color-options">
+                <div class="color-btn" style="background: #ff6b9d;" data-color="#ff6b9d"></div>
+                <div class="color-btn" style="background: #c44569;" data-color="#c44569"></div>
+                <div class="color-btn" style="background: #f8b500;" data-color="#f8b500"></div>
+                <div class="color-btn" style="background: #a29bfe;" data-color="#a29bfe"></div>
+                <div class="color-btn" style="background: #fd79a8;" data-color="#fd79a8"></div>
+                <div class="color-btn" style="background: #ffeaa7;" data-color="#ffeaa7"></div>
+            </div>
+        </div>
+
+        <div class="memory-game">
+            <h3>Birthday Memory Game</h3>
+            <p>Match the pairs! Find Mohit's favorite things.</p>
+            <div class="game-board" id="gameBoard"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ for Mohit | Created by Friends</p>
+    </footer>
+
+    <!-- Final Popup -->
+    <div class="overlay" id="overlay"></div>
+    <div class="final-popup" id="finalPopup">
+        <h2>Stay happy, Mohit…🌼🎉,</h2>
+        <p> the world feels warmer with your smile or you deserve every good things 💛✨</p>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/happy-birthday-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Sound enabled state
+        let soundEnabled = true;
+        const soundToggle = document.getElementById('soundToggle');
+
+        soundToggle.addEventListener('click', () => {
+            soundEnabled = !soundEnabled;
+            soundToggle.textContent = soundEnabled ? '🔊 Sound ON' : '🔇 Sound OFF';
+        });
+
+        // Music enabled state
+        let musicEnabled = false;
+        const musicToggle = document.getElementById('musicToggle');
+        const bgMusic = document.getElementById('bgMusic');
+
+        musicToggle.addEventListener('click', () => {
+            musicEnabled = !musicEnabled;
+            musicToggle.textContent = musicEnabled ? '🎵 Music ON' : '🎵 Music OFF';
+            if (musicEnabled) {
+                bgMusic.play().catch(e => console.log('Autoplay blocked'));
+            } else {
+                bgMusic.pause();
+            }
+        });
+
+        // Dark mode state
+        let darkMode = false;
+        const darkModeToggle = document.getElementById('darkModeToggle');
+
+        darkModeToggle.addEventListener('click', () => {
+            darkMode = !darkMode;
+            document.body.classList.toggle('dark-mode', darkMode);
+            darkModeToggle.textContent = darkMode ? '☀️ Dark Mode ON' : '🌙 Dark Mode OFF';
+        });
+
+        // Quiz
+        const quizData = [
+            {
+                question: "What is Mohit's favorite hobby?",
+                options: ["Reading", "Gaming", "Sports"],
+                answer: "Gaming"
+            },
+            {
+                question: "What does Mohit love most?",
+                options: ["Pizza", "Burgers", "Pasta"],
+                answer: "Pizza"
+            },
+            {
+                question: "Mohit's favorite season?",
+                options: ["Summer", "Winter", "Spring"],
+                answer: "Summer"
+            }
+        ];
+
+        let currentQuestion = 0;
+        const questionEl = document.getElementById('question');
+        const optionA = document.getElementById('optionA');
+        const optionB = document.getElementById('optionB');
+        const optionC = document.getElementById('optionC');
+        const resultEl = document.getElementById('result');
+
+        function loadQuestion() {
+            const q = quizData[currentQuestion];
+            questionEl.textContent = q.question;
+            optionA.textContent = q.options[0];
+            optionB.textContent = q.options[1];
+            optionC.textContent = q.options[2];
+            resultEl.textContent = '';
+        }
+
+        optionA.addEventListener('click', () => checkAnswer(optionA.textContent));
+        optionB.addEventListener('click', () => checkAnswer(optionB.textContent));
+        optionC.addEventListener('click', () => checkAnswer(optionC.textContent));
+
+        function checkAnswer(selected) {
+            const correct = quizData[currentQuestion].answer;
+            if (selected === correct) {
+                resultEl.textContent = 'Correct! 🎉';
+            } else {
+                resultEl.textContent = `Wrong! The answer is ${correct}. 😊`;
+            }
+            currentQuestion = (currentQuestion + 1) % quizData.length;
+            setTimeout(loadQuestion, 2000);
+        }
+
+        loadQuestion();
+
+        // Cut Cake
+        function cutCake() {
+            for (let i = 0; i < 20; i++) {
+                createConfetti();
+            }
+            const cake = document.querySelector('.cake');
+            cake.textContent = '🍰';
+            setTimeout(() => cake.textContent = '🎂', 2000);
+        }
+
+        // Share functions
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+        }
+
+        function shareOnTwitter() {
+            const text = encodeURIComponent("Check out this awesome birthday wish for Mohit! 🎉");
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+        }
+
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent("Check out this awesome birthday wish for Mohit! 🎉 " + window.location.href);
+            window.open(`https://wa.me/?text=${text}`, '_blank');
+        }
+
+        // Birthday Facts
+        const facts = [
+            "Did you know? The tradition of birthday cakes dates back to ancient Rome!",
+            "A birthday is the anniversary of the day on which a person was born.",
+            "The most common birthday in the US is October 5th.",
+            "People tend to be happier on their birthday than any other day of the year.",
+            "The first birthday cards were sent in the 1800s.",
+            "In some cultures, it's considered bad luck to celebrate a birthday before the actual day."
+        ];
+
+        let factIndex = 0;
+        const factDisplay = document.getElementById('factDisplay');
+
+        function rotateFacts() {
+            factIndex = (factIndex + 1) % facts.length;
+            factDisplay.textContent = facts[factIndex];
+        }
+
+        setInterval(rotateFacts, 5000);
+
+        // Message Form with EmailJS and Local Storage
+        function submitMessage() {
+            const name = document.getElementById('messageName').value.trim();
+            const message = document.getElementById('messageText').value.trim();
+            
+            if (name && message) {
+                // Show loading state
+                const submitBtn = document.querySelector('.message-form button');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending... 📤';
+                submitBtn.disabled = true;
+                
+                // Prepare email parameters
+                const templateParams = {
+                    from_name: name,
+                    to_name: 'Mohit',
+                    message: message,
+                    reply_to: 'noreply@birthdaywish.com', // You can customize this
+                    timestamp: new Date().toLocaleString()
+                };
+
+                // Send email using EmailJS
+                emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                    .then(function(response) {
+                        console.log('Email sent successfully!', response.status, response.text);
+                        
+                        // Save to local storage as backup
+                        const messages = JSON.parse(localStorage.getItem('birthdayMessages') || '[]');
+                        const newMessage = {
+                            name: name,
+                            message: message,
+                            timestamp: new Date().toLocaleString(),
+                            id: Date.now(),
+                            emailSent: true
+                        };
+                        messages.push(newMessage);
+                        localStorage.setItem('birthdayMessages', JSON.stringify(messages));
+                        
+                        // Success feedback
+                        alert(`Thank you, ${name}! Your message has been sent to Mohit's email and saved locally! 🎉\n\nMessage: "${message}"`);
+                        
+                        // Clear form
+                        document.getElementById('messageName').value = '';
+                        document.getElementById('messageText').value = '';
+                        
+                        // Update message display
+                        displaySavedMessages();
+                        
+                        // Reset button
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        
+                    }, function(error) {
+                        console.log('Email failed to send:', error);
+                        
+                        // Fallback: save locally even if email fails
+                        const messages = JSON.parse(localStorage.getItem('birthdayMessages') || '[]');
+                        const newMessage = {
+                            name: name,
+                            message: message,
+                            timestamp: new Date().toLocaleString(),
+                            id: Date.now(),
+                            emailSent: false,
+                            error: 'Email failed to send'
+                        };
+                        messages.push(newMessage);
+                        localStorage.setItem('birthdayMessages', JSON.stringify(messages));
+                        
+                        alert(`Message saved locally, but email failed to send. Please check your EmailJS configuration.\n\nMessage: "${message}"`);
+                        
+                        // Clear form and reset button
+                        document.getElementById('messageName').value = '';
+                        document.getElementById('messageText').value = '';
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        
+                        displaySavedMessages();
+                    });
+            } else {
+                alert('Please fill in both name and message.');
+            }
+        }
+
+        // Display saved messages
+        function displaySavedMessages() {
+            const messages = JSON.parse(localStorage.getItem('birthdayMessages') || '[]');
+            const messageList = document.getElementById('savedMessages');
+            
+            if (messages.length > 0) {
+                messageList.innerHTML = '<h4>Saved Birthday Messages 💌</h4>';
+                messages.forEach(msg => {
+                    const statusIcon = msg.emailSent ? '📧' : '💾';
+                    const statusText = msg.emailSent ? 'Email sent' : 'Saved locally';
+                    const statusColor = msg.emailSent ? '#4CAF50' : '#ff9800';
+                    
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = 'saved-message';
+                    messageDiv.innerHTML = `
+                        <strong>${msg.name}</strong> <small>(${msg.timestamp})</small>
+                        <span style="color: ${statusColor}; font-size: 0.8rem;">${statusIcon} ${statusText}</span><br>
+                        ${msg.message}
+                        ${msg.error ? `<br><small style="color: #f44336;">${msg.error}</small>` : ''}
+                    `;
+                    messageList.appendChild(messageDiv);
+                });
+            } else {
+                messageList.innerHTML = '<p>No messages saved yet. Be the first to leave a birthday wish! 🎂</p>';
+            }
+        }
+
+        // Load messages on page load
+        displaySavedMessages();
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            let birthday = new Date(currentYear, 2, 24); // March 24
+
+            if (now > birthday) {
+                birthday = new Date(currentYear + 1, 2, 24);
+            }
+
+            const diff = birthday - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('countdownTimer').textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Gift Box
+        const giftBox = document.getElementById('giftBox');
+        giftBox.addEventListener('click', () => {
+            giftBox.classList.add('opened');
+            // Play sound if enabled
+            if (soundEnabled) {
+                playFireworkSound();
+            }
+            // Create extra confetti
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => createConfetti(), i * 100);
+            }
+        });
+
+        // Photo Slideshow
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 4000);
+
+        // Snowfall
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.animationDuration = (Math.random() * 5 + 5) + 's';
+            snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        }
+
+        setInterval(createSnowflake, 300);
+
+        // Color Picker
+        let selectedColor = '#ff6b9d';
+        document.querySelectorAll('.color-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                selectedColor = btn.dataset.color;
+                document.querySelectorAll('.color-btn').forEach(b => b.style.borderColor = '#fff');
+                btn.style.borderColor = '#000';
+            });
+        });
+
+        // Modify createBalloon and createConfetti to use selectedColor
+        const originalCreateBalloon = createBalloon;
+        const originalCreateConfetti = createConfetti;
+
+        createBalloon = function() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.backgroundColor = selectedColor;
+            balloon.style.left = Math.random() * 100 + '%';
+            balloon.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            balloon.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(balloon);
+
+            setTimeout(() => {
+                balloon.remove();
+            }, 8000);
+        };
+
+        createConfetti = function() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.backgroundColor = selectedColor;
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+
+            setTimeout(() => {
+                confetti.remove();
+            }, 4000);
+        };
+
+        // Memory Game
+        const gameBoard = document.getElementById('gameBoard');
+        const cards = ['🎂', '🎈', '🎁', '⭐', '🎂', '🎈', '🎁', '⭐'];
+        let flippedCards = [];
+        let matchedCards = [];
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function createGameBoard() {
+            const shuffledCards = shuffle([...cards]);
+            shuffledCards.forEach((card, index) => {
+                const cardElement = document.createElement('div');
+                cardElement.className = 'card';
+                cardElement.dataset.index = index;
+                cardElement.dataset.value = card;
+                cardElement.addEventListener('click', flipCard);
+                gameBoard.appendChild(cardElement);
+            });
+        }
+
+        function flipCard() {
+            if (flippedCards.length < 2 && !this.classList.contains('flipped') && !matchedCards.includes(this)) {
+                this.classList.add('flipped');
+                this.textContent = this.dataset.value;
+                flippedCards.push(this);
+
+                if (flippedCards.length === 2) {
+                    setTimeout(checkMatch, 500);
+                }
+            }
+        }
+
+        function checkMatch() {
+            if (flippedCards[0].dataset.value === flippedCards[1].dataset.value) {
+                flippedCards.forEach(card => {
+                    card.classList.add('matched');
+                    matchedCards.push(card);
+                });
+                if (matchedCards.length === cards.length) {
+                    setTimeout(() => alert('Congratulations! You won the memory game! 🎉'), 500);
+                }
+            } else {
+                flippedCards.forEach(card => {
+                    card.classList.remove('flipped');
+                    card.textContent = '';
+                });
+            }
+            flippedCards = [];
+        }
+
+        createGameBoard();
+
+        // Typing Effect for Hero Text
+        const heroText = document.querySelector('.hero-text');
+        const text = 'Mohit';
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                heroText.textContent = text.substring(0, i + 1);
+                heroText.classList.add('typing-text');
+                i++;
+                setTimeout(typeWriter, 200);
+            } else {
+                heroText.classList.remove('typing-text');
+            }
+        }
+
+        // Start typing effect after page load
+        setTimeout(typeWriter, 1000);
+
+        // Click to create particles
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.container') && !e.target.closest('.sound-toggle')) {
+                for (let i = 0; i < 5; i++) {
+                    const particle = document.createElement('div');
+                    particle.textContent = Math.random() > 0.5 ? '💛' : '✨';
+                    particle.style.position = 'fixed';
+                    particle.style.left = e.clientX + (Math.random() - 0.5) * 100 + 'px';
+                    particle.style.top = e.clientY + (Math.random() - 0.5) * 100 + 'px';
+                    particle.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                    particle.style.pointerEvents = 'none';
+                    particle.style.zIndex = '5';
+                    particle.style.animation = 'particleFade 1s ease-out forwards';
+                    document.body.appendChild(particle);
+
+                    setTimeout(() => particle.remove(), 1000);
+                }
+            }
+        });
+
+        // Create Balloons
+        function createBalloon() {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            const colors = ['#ff6b9d', '#c44569', '#f8b500', '#a29bfe', '#fd79a8'];
+            balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            balloon.style.left = Math.random() * 100 + '%';
+            balloon.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            balloon.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(balloon);
+
+            setTimeout(() => {
+                balloon.remove();
+            }, 8000);
+        }
+
+        // Create Confetti
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            const colors = ['#ff6b9d', '#c44569', '#f8b500', '#a29bfe', '#fd79a8', '#ffeaa7'];
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+
+            setTimeout(() => {
+                confetti.remove();
+            }, 4000);
+        }
+
+        // Generate balloons and confetti continuously
+        setInterval(createBalloon, 800);
+        setInterval(createConfetti, 200);
+
+        // Mouse movement particles (hearts and sparkles)
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.8) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.textContent = Math.random() > 0.5 ? '💛' : '✨';
+                particle.style.left = e.clientX + 'px';
+                particle.style.top = e.clientY + 'px';
+                particle.style.fontSize = (Math.random() * 10 + 15) + 'px';
+                
+                const tx = (Math.random() - 0.5) * 100;
+                const ty = (Math.random() - 0.5) * 100;
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                
+                document.body.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 1000);
+            }
+        });
+
+        // Fireworks
+        const canvas = document.getElementById('fireworkCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let fireworks = [];
+        let particles = [];
+
+        class Firework {
+            constructor(x, y) {
+                this.x = x;
+                this.y = canvas.height;
+                this.targetY = y;
+                this.speed = 5;
+                this.acceleration = 1.05;
+                this.exploded = false;
+            }
+
+            update() {
+                if (this.y > this.targetY) {
+                    this.speed *= this.acceleration;
+                    this.y -= this.speed;
+                } else if (!this.exploded) {
+                    this.explode();
+                    this.exploded = true;
+                }
+            }
+
+            explode() {
+                const particleCount = 50;
+                const colors = ['#ff6b9d', '#c44569', '#f8b500', '#a29bfe', '#fd79a8', '#ffeaa7'];
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push(new Particle(this.x, this.targetY, colors[Math.floor(Math.random() * colors.length)]));
+                }
+                
+                // Play sound if enabled
+                if (soundEnabled) {
+                    playFireworkSound();
+                }
+            }
+
+            draw() {
+                if (!this.exploded) {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+                    ctx.fillStyle = '#fff';
+                    ctx.fill();
+                }
+            }
+        }
+
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.color = color;
+                this.velocity = {
+                    x: (Math.random() - 0.5) * 8,
+                    y: (Math.random() - 0.5) * 8
+                };
+                this.alpha = 1;
+                this.decay = 0.015;
+            }
+
+            update() {
+                this.velocity.y += 0.1;
+                this.x += this.velocity.x;
+                this.y += this.velocity.y;
+                this.alpha -= this.decay;
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function animateFireworks() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            fireworks.forEach((firework, index) => {
+                firework.update();
+                firework.draw();
+                if (firework.exploded) {
+                    fireworks.splice(index, 1);
+                }
+            });
+
+            particles.forEach((particle, index) => {
+                particle.update();
+                particle.draw();
+                if (particle.alpha <= 0) {
+                    particles.splice(index, 1);
+                }
+            });
+
+            requestAnimationFrame(animateFireworks);
+        }
+
+        // Simple sound synthesis for fireworks
+        let audioContext;
+        function playFireworkSound() {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.frequency.value = 200 + Math.random() * 400;
+            oscillator.type = 'sine';
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.5);
+        }
+
+        // Wish Button Click Handler
+        let fireworkInterval;
+        document.getElementById('wishButton').addEventListener('click', () => {
+            canvas.style.display = 'block';
+            animateFireworks();
+            
+            // Launch fireworks
+            fireworkInterval = setInterval(() => {
+                const x = Math.random() * canvas.width;
+                const y = Math.random() * canvas.height * 0.5;
+                fireworks.push(new Firework(x, y));
+            }, 300);
+
+            // Show final popup after 5 seconds
+            setTimeout(() => {
+                clearInterval(fireworkInterval);
+                document.getElementById('overlay').classList.add('show');
+                document.getElementById('finalPopup').classList.add('show');
+            }, 5000);
+        });
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
